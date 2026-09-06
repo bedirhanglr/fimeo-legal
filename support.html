@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fimeo Support</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f5fa; --surface: #ffffff; --surface-2: #efeaf5;
+    --border: #ddd5e8; --text: #211a2e; --text-muted: #675e7a; --text-faint: #948aa8;
+    --accent: #7b3fe4; --accent-strong: #5c16c9; --accent-soft: rgba(123,63,228,0.09);
+    --shadow: 0 1px 2px rgba(33,26,46,0.06), 0 8px 24px -12px rgba(33,26,46,0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0a12; --surface: #16121e; --surface-2: #1e1929;
+      --border: #2c2438; --text: #f1edf7; --text-muted: #a89fbc; --text-faint: #746a8c;
+      --accent: #b083ff; --accent-strong: #9b6bff; --accent-soft: rgba(176,131,255,0.14);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px -14px rgba(0,0,0,0.55);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans', system-ui, sans-serif; line-height: 1.65; }
+  .page { max-width: 640px; margin: 0 auto; padding: 72px 28px 100px; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 10px; }
+  h1 { font-family: 'Fraunces', Georgia, serif; font-size: 38px; font-weight: 600; margin: 0 0 12px; text-wrap: balance; }
+  p.lede { color: var(--text-muted); font-size: 16.5px; max-width: 54ch; margin: 0 0 40px; }
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+    padding: 26px 28px; box-shadow: var(--shadow); margin-bottom: 40px;
+  }
+  .contact-card .label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
+  .contact-card a.email { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--accent-strong); text-decoration: none; }
+  .contact-card a.email:hover { text-decoration: underline; }
+  .contact-card .response { margin-top: 10px; font-size: 13.5px; color: var(--text-muted); }
+  h2 { font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 600; margin: 0 0 16px; }
+  .faq { display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
+  details {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 14px 18px;
+  }
+  summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; color: var(--accent); font-size: 20px; font-weight: 400; }
+  details[open] summary::after { content: '–'; }
+  details p { margin: 12px 0 0; color: var(--text-muted); font-size: 14.5px; max-width: 56ch; }
+  .links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+  .links a { color: var(--accent-strong); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--text-faint); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Support</div>
+  <h1>How can we help?</h1>
+  <p class="lede">For bugs, account issues, questions about how Fimeo works, or anything you'd rather not put in a public report inside the app — reach out directly.</p>
+
+  <div class="contact-card">
+    <div class="label">Email us</div>
+    <a class="email" href="mailto:support@fimeo.app">support@fimeo.app</a>
+    <div class="response">We typically respond within 2–3 business days.</div>
+  </div>
+
+  <h2>Common questions</h2>
+  <div class="faq">
+    <details>
+      <summary>How do I report a post or a user?</summary>
+      <p>Tap the <strong>···</strong> icon on any post, or the <strong>···</strong> icon on a profile, and choose Report. Pick a reason and add any details — we review every report.</p>
+    </details>
+    <details>
+      <summary>How do I block someone?</summary>
+      <p>From their profile or from any of their posts, tap <strong>···</strong> → Block. Their posts will stop appearing in your feed immediately, and they won't be notified.</p>
+    </details>
+    <details>
+      <summary>How do I delete my account?</summary>
+      <p>Go to Settings → Delete Account. This is permanent and removes your profile, posts, and everything you've added to Fimeo right away.</p>
+    </details>
+    <details>
+      <summary>I forgot my password — what do I do?</summary>
+      <p>On the sign-in screen, tap "Forgot password?" and follow the link we email you.</p>
+    </details>
+  </div>
+
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+
+  <footer>Fimeo Support</footer>
+</div>
+</body>
+</html>
